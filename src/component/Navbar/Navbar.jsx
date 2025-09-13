@@ -1,15 +1,12 @@
-// Navbar.jsx
+
 import React, { useState, useEffect } from "react";
-
-
-import "../Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (!event.target.closest(".dropdown")) {
@@ -22,71 +19,100 @@ const Navbar = () => {
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
-    setMenuOpen(false); // close mobile menu on click
+    setMenuOpen(false);
   };
 
   return (
-    <nav className="navbar">
-      <div className="navbar-left">LifeLink</div>
+    <>
+    <nav className="fixed top-0 left-0 w-full h-[60px] bg-white text-red-600 z-50 shadow-md flex justify-between items-center px-6">
+      {/* Brand */}
+      <div className="text-2xl font-bold">LifeLink</div>
 
-      <div className={`navbar-right ${menuOpen ? "active" : ""}`}>
-        <a
-          href="#home"
-          className={activeLink === "home" ? "active" : ""}
+      {/* Menu links */}
+      <div
+        className={`flex items-center space-x-6 md:flex ${menuOpen ? "flex flex-col absolute top-[60px] left-0 w-full bg-white shadow-md py-4 md:static md:flex-row md:space-x-6" : "hidden md:flex"}`}
+      >
+        <Link
+          to=""
           onClick={() => handleLinkClick("home")}
+          className={`relative font-medium transition-colors duration-300 ${
+            activeLink === "home" ? "text-red-700" : "hover:text-red-700"
+          }`}
         >
           Home
-        </a>
-        <a
-          href="about"
-          className={activeLink === "about" ? "active" : ""}
+        </Link>
+        <Link
+          to="about"
           onClick={() => handleLinkClick("about")}
+          className={`relative font-medium transition-colors duration-300 ${
+            activeLink === "about" ? "text-red-700" : "hover:text-red-700"
+          }`}
         >
           About Us
-        </a>
-        <a
-          href="#contact"
-          className={activeLink === "contact" ? "active" : ""}
+        </Link>
+        <Link
+          to="#contact"
           onClick={() => handleLinkClick("contact")}
+          className={`relative font-medium transition-colors duration-300 ${
+            activeLink === "contact" ? "text-red-700" : "hover:text-red-700"
+          }`}
         >
           Contact Us
-        </a>
+        </Link>
 
-        <div className="dropdown">
+        {/* Dropdown */}
+        <div className="relative dropdown">
           <button
             onClick={(e) => {
               e.stopPropagation();
               setDropdownOpen(!dropdownOpen);
             }}
-            className="dropbtn"
+            className="font-medium cursor-pointer hover:text-red-700 flex items-center"
           >
             Register Now ▼
           </button>
           {dropdownOpen && (
-            <div className="dropdown-content">
-              <a href="#donor" onClick={() => handleLinkClick("donor")}>
+            <div className="absolute mt-2 w-48 bg-white rounded-md shadow-lg border z-50">
+              <Link
+              to="#donor"
+                onClick={() => handleLinkClick("donor")}
+                className="block px-4 py-2 text-red-600 hover:bg-red-100"
+              >
                 Register as Donor
-              </a>
-              <a href="#recipient" onClick={() => handleLinkClick("recipient")}>
+              </Link>
+              <Link
+                to="#recipient"
+                onClick={() => handleLinkClick("recipient")}
+                className="block px-4 py-2 text-red-600 hover:bg-red-100"
+              >
                 Register as Recipient
-              </a>
+              </Link>
             </div>
           )}
         </div>
 
-        <button className="login-btn" onClick={() => handleLinkClick("login")}>
+        {/* Login button */}
+        <button
+          onClick={() => handleLinkClick("login")}
+          className="bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition"
+        >
           Login
         </button>
       </div>
 
-      {/* Hamburger menu for mobile */}
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
+      {/* Hamburger (mobile) */}
+      <div
+        className="md:hidden flex flex-col cursor-pointer"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <div className="h-[3px] w-6 bg-red-600 mb-1"></div>
+        <div className="h-[3px] w-6 bg-red-600 mb-1"></div>
+        <div className="h-[3px] w-6 bg-red-600"></div>
       </div>
     </nav>
+    </>
   );
 };
+
 
 export default Navbar;

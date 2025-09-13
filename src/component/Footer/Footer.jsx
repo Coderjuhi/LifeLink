@@ -6,7 +6,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 function Footer() {
     return (
         <>
-            <footer className="bg-[#0f172a] text-gray-300 py-12 mt-auto">
+            <footer className="bg-black text-gray-300 py-12 ">
                 <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col">
                     {/* Top section */}
                     <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-700 pb-8 mb-8">
@@ -16,7 +16,7 @@ function Footer() {
                         </div>
                         <div className="flex items-center gap-4 mt-6 md:mt-0">
                             <p className="text-white font-medium">Ready to get started?</p>
-                            <button className="bg-pink-500 text-white px-6 py-2 rounded-md font-semibold shadow-md hover:bg-pink-600 transition">
+                            <button className="bg-red-600 text-white px-6 py-2 rounded-md font-semibold shadow-md hover:bg-red-700 transition">
                                 Donate
                             </button>
                         </div>
@@ -35,7 +35,7 @@ function Footer() {
                                     placeholder="Email address"
                                     className="w-full px-3 py-2 bg-gray-800 text-gray-200 outline-none"
                                 />
-                                <button className="bg-pink-500 px-4 py-2 hover:bg-pink-600 transition">
+                                <button className="bg-red-600 px-4 py-2 hover:bg-red-700 transition">
                                     ➤
                                 </button>
                             </div>
@@ -94,6 +94,6 @@ function Footer() {
             </footer>
         </>
     )
-}
+};
 
 export default Footer
