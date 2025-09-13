@@ -5,7 +5,7 @@ const Home = () => {
     <>
       <div >
         <div>
-          <div></div>
+          <div>hi</div>
           <div></div>
         </div>
       </div>
