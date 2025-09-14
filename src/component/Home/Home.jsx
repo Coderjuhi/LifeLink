@@ -3,8 +3,8 @@ import React from 'react'
 const Home = () => {
   return (
     <>
-      <div className="max-w-10xl mx-auto p-3.5">
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center min-h-[80vh]">
+      <div className="max-w-10xl mx-auto p-3.5 ">
+        <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-1xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center min-h-[80vh]">
 
           {/* Left column: headings, paragraph, buttons */}
           <div className="w-full md:w-1/2 p-10 flex flex-col justify-center">
@@ -13,7 +13,7 @@ const Home = () => {
 
 
             <div className="flex flex-wrap gap-4">
-              <button className="px-6 py-3 rounded-2xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition">
+              <button className="px-6 py-3 rounded-1xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition">
                 Primary Action
               </button>
 
@@ -46,8 +46,8 @@ const Home = () => {
 
 
       {/* //second container */}
-      <div className="max-w-10xl mx-auto my-10 px-6">
-  <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center min-h-[90vh] p-8 gap-8">
+      <div className="max-w-10xl mx-auto  px-6">
+  <div className="bg-white rounded-1xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center min-h-[90vh]">
 
     {/* Left column: Text */}
     <div className="w-full md:w-1/2 flex flex-col justify-center p-6">
