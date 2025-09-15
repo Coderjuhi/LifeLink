@@ -1,5 +1,29 @@
 import React from 'react'
+import { motion } from "framer-motion";
 
+import { FaArrowRight } from "react-icons/fa6";
+
+
+const blogs = [
+  {
+    date: "20 Jan, 2025",
+    title: "Providing Food, Clean Water, and Medical Care to Those Who Need",
+    desc: "Through support & donations, we bring food, clean water, and medical care to vulnerable families.",
+    img: "https://tci.cornell.edu/wp-content/uploads/2021/03/handwash-scaled-2048x1366.jpg",
+  },
+  {
+    date: "25 Jan, 2025",
+    title: "No One Should Go Hungry, Thirsty, or Without Treatment",
+    desc: "Providing support, food, & medicine and bringing hope to underprivileged communities.",
+    img: "https://assets.change.org/photos/0/sl/ml/HDSLMLuJKyNoikM-1600x900-noPad.jpg?1739433372",
+  },
+  {
+    date: "30 Jan, 2025",
+    title: "Nutritious Meals, Safe Water, and Health Care to Every Child in Need",
+    desc: "Together, we can make a real difference in children’s health and well-being.",
+    img: "https://samvadaworld.com/wp-content/uploads/2021/05/26961702527_cecbe9beb3_b.jpg",
+  },
+];
 const Home = () => {
   return (
     <>
@@ -46,38 +70,272 @@ const Home = () => {
 
 
       {/* //second container */}
-      <div className="max-w-10xl mx-auto  px-6">
-  <div className="bg-white rounded-1xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center min-h-[90vh]">
+      <div className="max-w-10xl mx-auto  p-3.5">
+        <div className="bg-white rounded-1xl  overflow-hidden flex flex-col md:flex-row items-center min-h-[80vh]">
 
-    {/* Left column: Text */}
-    <div className="w-full md:w-1/2 flex flex-col justify-center p-6">
-      <h2 className="text-5xl md:text-5xl font-bold leading-tight mb-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing.
-      </h2>
-      <p className="text-1xl text-gray-700 mb-6">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem magnam, dolorum
-        libero non commodi nemo nam. Blanditiis maxime dolorem voluptas. Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Expedita mollitia eum odit animi ut. Explicabo ipsam reprehenderit suscipit ea quasi!
-      </p>
+          {/* Left column: Text */}
+          <div className="w-full md:w-1/2 flex flex-col justify-center p-6">
+            <h2 className="text-5xl md:text-5xl font-bold leading-tight mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing.
+            </h2>
+            <p className="text-1xl text-gray-700 mb-6">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem magnam, dolorum
+              libero non commodi nemo nam. Blanditiis maxime dolorem voluptas. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Expedita mollitia eum odit animi ut. Explicabo ipsam reprehenderit suscipit ea quasi!
+            </p>
 
-      <div className="flex flex-wrap gap-4">
-        <button className="px-6 py-3 rounded-2xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition">
-          Read More
-        </button>
+            <div className="flex flex-wrap gap-4">
+              <button className="px-6 py-3 rounded-2xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition">
+                Read More
+              </button>
+            </div>
+          </div>
+
+          {/* Right column: Image */}
+          <div className="w-full md:w-1/2 flex items-center justify-center">
+            <img
+              src="https://regencyhealthcare.in/wp-content/uploads/2018/08/blood-donation-3.png"
+              alt="Illustration"
+              className="w-full max-w-2xl h-auto rounded-xl object-cover shadow-xl"
+            />
+          </div>
+
+        </div>
       </div>
-    </div>
 
-    {/* Right column: Image */}
-    <div className="w-full md:w-1/2 flex items-center justify-center">
-      <img
-        src="https://regencyhealthcare.in/wp-content/uploads/2018/08/blood-donation-3.png"
-        alt="Illustration"
-        className="w-full max-w-2xl h-auto rounded-xl object-cover shadow-xl"
-      />
-    </div>
+      {/* Third container */}
+      <div className="max-w-10xl mx-auto p-3.5">
+        <div className="bg-white rounded-2xl  overflow-hidden min-h-[80vh] p-8">
 
-  </div>
-</div>
+          {/* Heading */}
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 leading-snug px-4 max-w-3xl mx-auto -mt-4">
+            Your Donation Brings Smiles And Transforms Lives
+          </h2>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 ">
+            {/* Card 1 */}
+            <div className="bg-white p-6 rounded-1xl shadow-md  transition duration-300 cursor-pointer group relative w-72 ">
+              <h3 className="text-xl text-orange-400 font-semibold mb-2 ">Feature One</h3>
+              <p className="text-gray-600 py-3">
+                Lorem ipsum dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+                iste. adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta! Lorem ipsum dolor sit
+
+              </p>
+              <p className='text-gray-900  flex items-center py-6 justify-between '>Lorem ipsum Lorem, ipsum <FaArrowRight />
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 cursor-pointer group relative w-72">
+              <h3 className="text-xl text-orange-400 font-semibold mb-2">Feature Two</h3>
+              <p className="text-gray-600 py-3">
+                Doloremque cum asperiores dicta Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Sit, illum! ipsum  consequatur laborum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, explicabo.
+              </p>
+              <p className='text-gray-900  flex items-center py-6 justify-between '>Lorem ipsum Lorem, ipsum <FaArrowRight />
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 cursor-pointer group relative w-72">
+              <h3 className="text-xl text-orange-400 font-semibold mb-2">Feature Three</h3>
+              <p className="text-gray-600 py-3">
+                Ullam, provident pariatur earum doloremque unde animi doloribus Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Deserunt, eligendi Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consec
+
+              </p>
+              <p className='text-gray-900  flex items-center py-6 justify-between '>Lorem ipsum Lorem, ipsum <FaArrowRight />
+
+
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 cursor-pointer group relative w-72">
+              <h3 className="text-xl text-orange-400 font-semibold mb-2">Feature Four</h3>
+              <p className="text-gray-600 py-3">
+                Necessitatibus iure magni repellendus dolorum vitae velit minus Lorem ipsum dolor sit, amet Lorem ipsum,
+                dolor sit amet consectetur adipisicing elit. Autem, illo! consectetur adipisicing elit
+              </p>
+              <p className='text-gray-900  flex items-center py-6 justify-between '>Lorem ipsum Lorem, ipsum <FaArrowRight />
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      {/* fourth container */}
+      {/* Heading */}
+      <div className="max-w-10xl mx-auto p-3.5">
+        <div className="bg-white rounded-1xl shadow-lg overflow-hidden min-h-[80vh] p-8">
+
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 leading-snug px-4 max-w-3xl mx-auto -mt-4">
+            Together For Change: Join Our Mission To Make A Difference
+          </h2>
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-3 gap-3 ">
+            {/* Card 1 */}
+            <div className="bg-white px-9  py-9 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 cursor-pointer group relative w-90 ">
+              <h3 className="text-xl text-orange-400 font-semibold mb-2 ">Feature One</h3>
+              <img
+                src="/covid_donate.jpg"
+                alt="Illustration"
+                className="w-full max-w-lg h-auto rounded-xl object-cover shadow-inner " />
+
+              <p className="text-gray-600 py-3">
+                Lorem ipsum dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+
+
+              </p>
+              <p className='text-gray-900  flex items-center py-6 justify-between '>Lorem ipsum Lorem, ipsum
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white p-9 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 cursor-pointer group relative w-90">
+              <h3 className="text-xl text-orange-400 font-semibold mb-2">Feature Two</h3>
+              <img
+                src="/doing-blood-donate.jpg"
+                alt="Illustration"
+                className="w-full max-w-lg h-auto rounded-xl object-cover shadow-inner " />
+              <p className="text-gray-600 py-3">
+                Doloremque cum asperiores dicta Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+
+              </p>
+              <p className='text-gray-900  flex items-center py-6 justify-between '>Lorem ipsum Lorem, ipsum
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 cursor-pointer group relative w-90">
+              <h3 className="text-xl text-orange-400 font-semibold mb-2">Feature Three</h3>
+              <img
+                src="/plasma-donate.jpg"
+                alt="Illustration"
+                className="w-full max-w-lg h-auto rounded-xl object-cover shadow-inner " />
+              <p className="text-gray-600 py-3">
+                Ullam, provident pariatur earum doloremque unde animi doloribus Lorem ipsum dolor sit amet consectetur,
+
+
+              </p>
+              <p className='text-gray-900  flex items-center py-6 justify-between '>Lorem ipsum Lorem, ipsum
+
+
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* fifth container */}
+
+        <div className="bg-gray-200 rounded-1xl shadow-lg overflow-hidden min-h-[60vh] p-8">
+          {/* Heading */}
+          <h2 className="text-4xl font-bold text-gray-800 mb-2 mt-4">
+            Where Your Giving Goes: <br /> Transparency & Impact
+          </h2>
+          <p className="text-gray-500 mb-6">
+            Ensuring every dollar contributes to real difference, here’s how your
+            generosity is utilized to bring impact.
+          </p>
+
+          {/* /* Donut Section */}
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            {/* Legend */}
+            <div className="space-y-3 w-full md:w-1/2">
+              <div className="flex items-center gap-3">
+                <span className="w-4 h-4 square-full bg-green-700"></span>
+                <span>37% Healthy Food</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="w-4 h-4 square-full bg-orange-400"></span>
+                <span>29% Medicine</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="w-4 h-4 square-full bg-yellow-400"></span>
+                <span>17% Pure Water</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="w-4 h-4 square-full bg-teal-500"></span>
+                <span>13% Education</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="w-4 h-4 square-full bg-green-500"></span>
+                <span>12% Feed the Poor</span>
+              </div>
+            </div>
+
+            {/* Donut Chart (larger, broader, shifted right) */}
+            <div className="w-72 h-72 rounded-full relative ml-auto">
+              <div
+                className="w-full h-full rounded-full"
+                style={{
+                  background: `conic-gradient(
+          #2F855A 0% 37%,
+          #ED8936 37% 66%,
+          #ECC94B 66% 83%,
+          #38B2AC 83% 96%,
+          #48BB78 96% 100%
+        )`
+                }}
+              ></div>
+              {/* Inner white circle (smaller → makes donut ring thicker) */}
+              <div className="absolute top-10 left-10 w-52 h-52 bg-gray-200 rounded-full">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* sixth container */}
+        <div className="bg-white rounded-1xl shadow-lg overflow-hidden min-h-[60vh] p-8">
+          <section className="py-12">
+            {/* Heading */}
+            <div className="text-center mb-10">
+              <p className="text-orange-500 font-medium">From The Blog</p>
+              <h2 className="text-3xl font-bold text-gray-800">
+                Our Latest News And Articles
+              </h2>
+            </div>
+
+            {/* Blog Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {blogs.map((blog, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-[#1f3b47] text-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden"
+                  initial={{ opacity: 0, x: -100 }}   // start hidden and left
+                  whileInView={{ opacity: 1, x: 0 }} // animate when visible
+                  transition={{ duration: 0.8, delay: index * 0.2 }} // stagger animation
+                  viewport={{ once: true }}
+                >
+
+                  <div className="relative">
+                    <img
+                      src={blog.img}
+                      alt={blog.title}
+                      className="w-full h-48 object-cover"
+                    />
+                    <span className="absolute top-3 left-3 bg-white text-gray-800 text-sm px-3 py-1 rounded-md shadow">
+                      {blog.date}
+                    </span>
+                  </div>
+
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold mb-2">{blog.title}</h3>
+                    <p className="text-gray-300 text-sm mb-4">{blog.desc}</p>
+                    <button className="flex items-center gap-2 text-orange-400 hover:underline">
+                      Read more <FaArrowRight />
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        
+      </div>
+
 
 
     </>

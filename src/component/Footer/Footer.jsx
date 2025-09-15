@@ -1,17 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { MdOutlineBloodtype } from "react-icons/md";
+import { FaAnglesRight } from "react-icons/fa6";
+
+
 
 
 function Footer() {
     return (
         <>
-            <footer className="bg-black text-gray-300 py-12 ">
+            <footer className="bg-gray-900  text-gray-300 py-12 ">
                 <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col">
                     {/* Top section */}
                     <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-700 pb-8 mb-8">
                         <div className="flex items-center gap-2">
-                            <span className="text-2xl">🩸</span>
+                            <span className="text-2xl"><MdOutlineBloodtype className='text-red-600'/>
+                            </span>
                             <p className="text-lg font-semibold">Blood & Organ Donation</p>
                         </div>
                         <div className="flex items-center gap-4 mt-6 md:mt-0">
@@ -36,7 +41,8 @@ function Footer() {
                                     className="w-full px-3 py-2 bg-gray-800 text-gray-200 outline-none"
                                 />
                                 <button className="bg-red-600 px-4 py-2 hover:bg-red-700 transition">
-                                    ➤
+                                <FaAnglesRight />
+
                                 </button>
                             </div>
                         </div>
