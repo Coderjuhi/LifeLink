@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { FaHeartbeat } from "react-icons/fa";
+
 
 
 const Navbar = () => {
@@ -28,7 +30,11 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 w-full h-[71px] bg-white text-black z-50 shadow-md flex justify-between items-center px-6">
         {/* Brand */}
-        <div className="text-3xl font-bold text-red-600">LifeLink</div>
+
+<div className="flex items-center text-3xl font-bold text-red-600">
+  LifeLink  <FaHeartbeat className="mr-3 ml-3" />
+
+</div>
 
         {/* Menu links */}
         <div
