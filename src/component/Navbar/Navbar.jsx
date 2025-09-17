@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 
@@ -51,7 +51,7 @@ const Navbar = () => {
             About Us
           </Link>
           <Link
-            to="/contact"
+            to="contact"
             onClick={() => handleLinkClick("contact")}
             className={`relative font-medium transition-colors duration-300 ${activeLink === "contact" ? "text-red-700" : "hover:text-red-700"
               }`}
@@ -93,12 +93,16 @@ const Navbar = () => {
           </div>
 
           {/* Login button */}
+          <NavLink 
+          to="/login" 
+          onClick={() => handleLinkClick("login")}
+          className={({ isActive }) =>
+            `px-4 py-2 rounded-lg transition-colors duration-300 ${isActive ? "bg-red-600 text-white" : "bg-red-600 hover:bg-red-700 text-white"
+            }`
+          }>
+            Login
+          </NavLink>
 
-          <Link to="/login">
-            <button className="bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition">
-              Login
-            </button>
-          </Link>
         </div>
 
         {/* Hamburger (mobile) */}

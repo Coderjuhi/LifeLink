@@ -13,9 +13,11 @@ const [showPassword, setShowPassword] = useState(false);
 
 function handleSubmit(e) {
 e.preventDefault();
-// Demo behavior: accept any email + password 6+ chars
+                                          // Demo behavior: accept any email + password 6+ chars
 if (password.length < 6) { alert('Password must be at least 6 characters for demo'); return; } alert(`Demo sign in with
-    ${email}`); } return (
+    ${email}`); }
+    
+    return (
          <div
     className="min-h-screen bg-gradient-to-r from-pink-50 to-pink-100 flex items-center justify-center p-6">
     <div className="w-full max-w-md bg-white/90 backdrop-blur rounded-2xl shadow-xl border border-pink-200">

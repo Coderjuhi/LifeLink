@@ -50,7 +50,7 @@ const Home = () => {
           {/* Right column: image */}
           <div className="w-full md:w-1/2 p-8 flex items-center justify-center">
             <img
-              src="/blood-donation.png"
+              src="https://tse2.mm.bing.net/th/id/OIP.pDY5Prrfxn8lPFsGmLVh2wHaD4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
               alt="Illustration"
               className="w-full max-w-lg h-auto rounded-xl object-cover shadow-inner" />
           </div>
