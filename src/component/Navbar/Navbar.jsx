@@ -70,6 +70,7 @@ const Navbar = () => {
           <div className="relative dropdown">
             <button
               onClick={(e) => {
+                handleLinkClick("")
                 e.stopPropagation();
                 setDropdownOpen(!dropdownOpen);
               }}
