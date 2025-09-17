@@ -28,17 +28,21 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full h-[71px] bg-white text-black z-50 shadow-md flex justify-between items-center px-6">
+      <nav className="fixed top-0 left-0 w-full h-[65px] bg-white text-black z-50 shadow-md flex justify-between items-center px-6">
         {/* Brand */}
 
-<div className="flex items-center text-3xl font-bold text-red-600">
-  LifeLink  <FaHeartbeat className="mr-3 ml-3" />
+        <div className="flex items-center text-2xl font-bold text-red-600">
+          LifeLink  <FaHeartbeat className="mr-3 ml-3" />
 
-</div>
+        </div>
 
         {/* Menu links */}
         <div
-          className={`flex items-center space-x-6 md:flex ${menuOpen ? "flex flex-col absolute top-[60px] left-0 w-full bg-white shadow-md py-4 md:static md:flex-row md:space-x-6" : "hidden md:flex"}`}
+          className={`md:flex items-center space-x-6 transition-transform duration-300 ease-in-out 
+    ${menuOpen
+              ? "fixed top-[65px] right-0 w-52 bg-white shadow-lg flex flex-col space-y-4 p-6 z-40 h-auto"
+              : "hidden md:flex"
+            }`}
         >
           <Link
             to=""
@@ -65,19 +69,17 @@ const Navbar = () => {
             Contact Us
           </Link>
 
-
           {/* Dropdown */}
           <div className="relative dropdown">
             <button
               onClick={(e) => {
-                handleLinkClick("")
+                handleLinkClick("");
                 e.stopPropagation();
                 setDropdownOpen(!dropdownOpen);
               }}
               className="font-medium cursor-pointer hover:text-red-700 flex items-center"
             >
               Register Now <IoMdArrowDropdown />
-
             </button>
             {dropdownOpen && (
               <div className="absolute mt-2 w-48 bg-white rounded-md shadow-lg border z-50">
@@ -100,17 +102,21 @@ const Navbar = () => {
           </div>
 
           {/* Login button */}
-          <NavLink 
-          to="/login" 
-          onClick={() => handleLinkClick("login")}
-          className={({ isActive }) =>
-            `px-4 py-2 rounded-lg transition-colors duration-300 ${isActive ? "bg-red-600 text-white" : "bg-red-600 hover:bg-red-700 text-white"
-            }`
-          }>
+          <NavLink
+            to="/login"
+            onClick={() => handleLinkClick("login")}
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-lg transition-colors duration-300 ${isActive
+                ? "bg-red-600 text-white"
+                : "bg-red-600 hover:bg-red-700 text-white"
+              }`
+            }
+          >
             Login
           </NavLink>
-
         </div>
+
+
 
         {/* Hamburger (mobile) */}
         <div

@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion";
+import { Heart, Users, MapPin, Clock, Award, Shield } from 'lucide-react';
 
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -24,10 +25,33 @@ const blogs = [
     img: "https://samvadaworld.com/wp-content/uploads/2021/05/26961702527_cecbe9beb3_b.jpg",
   },
 ];
+
+const features = [
+  {
+    icon: Users,
+    title: 'Verified Donors',
+    description: 'All our donors are medically verified and regularly screened for safety.',
+  },
+  {
+    icon: MapPin,
+    title: 'Location-Based Matching',
+    description: 'Find the nearest donors quickly with our advanced location tracking.',
+  },
+  {
+    icon: Shield,
+    title: 'Secure & Private',
+    description: 'Your personal information is protected with enterprise-grade security.',
+  },
+  {
+    icon: Award,
+    title: 'Emergency Response',
+    description: '24/7 emergency support for critical blood and organ requirements.',
+  },
+];
 const Home = () => {
   return (
     <>
-      <div className="max-w-10xl mx-auto p-3.5 ">
+      <div className="max-w-10xl mx-auto p-2 ">
         <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-1xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center min-h-[80vh]">
 
           {/* Left column: headings, paragraph, buttons */}
@@ -37,12 +61,12 @@ const Home = () => {
 
 
             <div className="flex flex-wrap gap-4">
-              <button className="px-6 py-3 rounded-1xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition">
-                Primary Action
+              <button className="px-6 py-3 rounded-2xl bg-red-600 text-white font-medium hover:bg-red-700 transition">
+                Register As Donor
               </button>
 
               <button className="px-6 py-3 rounded-2xl border border-gray-300 text-gray-800 font-medium hover:bg-gray-100 transition">
-                Secondary Action
+                Request Blood/Organ
               </button>
             </div>
           </div>
@@ -50,7 +74,7 @@ const Home = () => {
           {/* Right column: image */}
           <div className="w-full md:w-1/2 p-8 flex items-center justify-center">
             <img
-              src="https://tse2.mm.bing.net/th/id/OIP.pDY5Prrfxn8lPFsGmLVh2wHaD4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+              src="/blood-donation.png"
               alt="Illustration"
               className="w-full max-w-lg h-auto rounded-xl object-cover shadow-inner" />
           </div>
@@ -115,52 +139,91 @@ const Home = () => {
           {/* Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 ">
             {/* Card 1 */}
-            <div className="bg-white p-6 rounded-1xl shadow-md  transition duration-300 cursor-pointer group relative w-72 ">
-              <h3 className="text-xl text-orange-400 font-semibold mb-2 ">Feature One</h3>
-              <p className="text-gray-600 py-3">
-                Lorem ipsum dolor sit amet consectetur Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-                iste. adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta! Lorem ipsum dolor sit
+            <div
+              className="bg-white p-6 rounded-2xl 
+               transition-all duration-300 cursor-pointer 
+               relative w-72 
+               border-l-0 hover:border-l-8 hover:border-l-orange-400"
+            >
+              <h3 className="text-xl text-orange-400 font-semibold mb-2">Feature One</h3>
 
+              <p className="text-gray-600 py-3">
+                Lorem ipsum dolor sit amet consectetur Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Debitis, iste. adipisicing elit Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Dicta! Lorem ipsum
+                dolor sit
               </p>
-              <p className='text-gray-900  flex items-center py-6 justify-between '>Lorem ipsum Lorem, ipsum <FaArrowRight />
+
+              <p className="text-gray-900 flex items-center py-6 justify-between">
+                Lorem ipsum Lorem, ipsum <FaArrowRight />
               </p>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 cursor-pointer group relative w-72">
+            <div
+              className="bg-white p-6 rounded-2xl 
+             transition-all duration-300 cursor-pointer 
+             relative w-72 
+             border-l-0 hover:border-l-8 hover:border-l-orange-400"
+            >
               <h3 className="text-xl text-orange-400 font-semibold mb-2">Feature Two</h3>
+
               <p className="text-gray-600 py-3">
-                Doloremque cum asperiores dicta Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Sit, illum! ipsum  consequatur laborum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, explicabo.
+                Doloremque cum asperiores dicta Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Sit, illum! ipsum consequatur laborum Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Quidem, explicabo.
               </p>
-              <p className='text-gray-900  flex items-center py-6 justify-between '>Lorem ipsum Lorem, ipsum <FaArrowRight />
+
+              <p className="text-gray-900 flex items-center py-6 justify-between">
+                Lorem ipsum Lorem, ipsum <FaArrowRight />
               </p>
             </div>
+
+
 
             {/* Card 3 */}
-            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 cursor-pointer group relative w-72">
+            <div
+              className="bg-white p-6 rounded-2xl 
+             transition-all duration-300 cursor-pointer 
+             relative w-72 
+             border-l-0 hover:border-l-8 hover:border-l-orange-400"
+            >
               <h3 className="text-xl text-orange-400 font-semibold mb-2">Feature Three</h3>
+
               <p className="text-gray-600 py-3">
-                Ullam, provident pariatur earum doloremque unde animi doloribus Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Deserunt, eligendi Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consec
-
+                Ullam, provident pariatur earum doloremque unde animi doloribus Lorem
+                ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, eligendi
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consec
               </p>
-              <p className='text-gray-900  flex items-center py-6 justify-between '>Lorem ipsum Lorem, ipsum <FaArrowRight />
 
-
+              <p className="text-gray-900 flex items-center py-6 justify-between">
+                Lorem ipsum Lorem, ipsum <FaArrowRight />
               </p>
             </div>
+
 
             {/* Card 4 */}
-            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl transition duration-300 cursor-pointer group relative w-72">
+            <div
+              className="bg-white p-6 rounded-2xl 
+             transition-all duration-300 cursor-pointer 
+             relative w-72 
+             border-l-0 hover:border-l-8 hover:border-l-orange-400"
+            >
               <h3 className="text-xl text-orange-400 font-semibold mb-2">Feature Four</h3>
+
               <p className="text-gray-600 py-3">
-                Necessitatibus iure magni repellendus dolorum vitae velit minus Lorem ipsum dolor sit, amet Lorem ipsum,
-                dolor sit amet consectetur adipisicing elit. Autem, illo! consectetur adipisicing elit
+                Necessitatibus iure magni repellendus dolorum vitae velit minus Lorem
+                ipsum dolor sit, amet Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Autem, illo! consectetur adipisicing elit
               </p>
-              <p className='text-gray-900  flex items-center py-6 justify-between '>Lorem ipsum Lorem, ipsum <FaArrowRight />
+
+              <p className="text-gray-900 flex items-center py-6 justify-between">
+                Lorem ipsum Lorem, ipsum <FaArrowRight />
               </p>
             </div>
+
+
+
           </div>
 
         </div>
@@ -227,66 +290,42 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* fifth container */}
+      </div>
+      {/* fifth container */}
+      <div className="max-w-10xl mx-auto p-3.5">
 
-        <div className="bg-gray-200 rounded-1xl shadow-lg overflow-hidden min-h-[60vh] p-8">
-          {/* Heading */}
-          <h2 className="text-4xl font-bold text-gray-800 mb-2 mt-4">
-            Where Your Giving Goes: <br /> Transparency & Impact
-          </h2>
-          <p className="text-gray-500 mb-6">
-            Ensuring every dollar contributes to real difference, here’s how your
-            generosity is utilized to bring impact.
-          </p>
+        <div className="bg-white rounded-1xl shadow-lg overflow-hidden min-h-[60vh] p-8">
+          <section className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Why Choose LifeLink?
+                </h2>
+                <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                  We provide a secure, efficient, and reliable platform for blood and organ donation
+                </p>
+              </div>
 
-          {/* /* Donut Section */}
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            {/* Legend */}
-            <div className="space-y-3 w-full md:w-1/2">
-              <div className="flex items-center gap-3">
-                <span className="w-4 h-4 square-full bg-green-700"></span>
-                <span>37% Healthy Food</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-4 h-4 square-full bg-orange-400"></span>
-                <span>29% Medicine</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-4 h-4 square-full bg-yellow-400"></span>
-                <span>17% Pure Water</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-4 h-4 square-full bg-teal-500"></span>
-                <span>13% Education</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-4 h-4 square-full bg-green-500"></span>
-                <span>12% Feed the Poor</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {features.map((feature, index) => (
+                  <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
+                    <div className="bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                      <feature.icon className="h-6 w-6 text-red-600" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                    <p className="text-gray-600 text-sm">{feature.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
+          </section>
 
-            {/* Donut Chart (larger, broader, shifted right) */}
-            <div className="w-72 h-72 rounded-full relative ml-auto">
-              <div
-                className="w-full h-full rounded-full"
-                style={{
-                  background: `conic-gradient(
-          #2F855A 0% 37%,
-          #ED8936 37% 66%,
-          #ECC94B 66% 83%,
-          #38B2AC 83% 96%,
-          #48BB78 96% 100%
-        )`
-                }}
-              ></div>
-              {/* Inner white circle (smaller → makes donut ring thicker) */}
-              <div className="absolute top-10 left-10 w-52 h-52 bg-gray-200 rounded-full">
-
-              </div>
-            </div>
-          </div>
         </div>
-        {/* sixth container */}
+
+      </div>
+      {/* sixth container */}
+      <div className="max-w-10xl mx-auto p-3.5">
+
         <div className="bg-white rounded-1xl shadow-lg overflow-hidden min-h-[60vh] p-8">
           <section className="py-12">
             {/* Heading */}
@@ -333,7 +372,7 @@ const Home = () => {
           </section>
         </div>
 
-        
+
       </div>
 
 
