@@ -1,4 +1,6 @@
 import React from 'react'
+import {  Mail, Phone, MapPin } from 'lucide-react';
+
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { MdOutlineBloodtype } from "react-icons/md";
@@ -49,12 +51,12 @@ function Footer() {
 
                         {/* Services */}
                         <div>
-                            <h4 className="text-white font-semibold mb-4">Services</h4>
+                            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
                             <ul className="space-y-2">
-                                <li>Email Marketing</li>
-                                <li>Campaigns</li>
-                                <li>Branding</li>
-                                <li>Offline</li>
+                                <li>About Us</li>
+                                <li>Register</li>
+                                <li>Contact Us</li>
+                                <li>Request Blood</li>
                             </ul>
                         </div>
 
@@ -63,21 +65,31 @@ function Footer() {
                             <h4 className="text-white font-semibold mb-4">About</h4>
                             <ul className="space-y-2">
                                 <li>Our Story</li>
-                                <li>Benefits</li>
+                                <li>Mission</li>
                                 <li>Team</li>
-                                <li>Careers</li>
+                                <li>Feedback</li>
                             </ul>
                         </div>
 
                         {/* Help */}
                         <div>
-                            <h4 className="text-white font-semibold mb-4">Help</h4>
-                            <ul className="space-y-2">
-                                <li>FAQs</li>
-                                <li>Contact Us</li>
-                            </ul>
-                        </div>
-                    </div>
+            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-red-600" />
+                <span className="text-gray-300">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-red-600" />
+                <span className="text-gray-300">info@lifelink.com</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="h-5 w-5 text-red-600" />
+                <span className="text-gray-300">123 Healthcare Ave, Medical City, MC 12345</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
                     {/* Bottom section */}
                     <div className="flex flex-col md:flex-row justify-between items-center mt-12 border-t border-gray-700 pt-6">
