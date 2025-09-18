@@ -46,21 +46,59 @@ const About = () => {
 
   return (
     <>
-     <section className="max-w-8xl mx-auto p-6 -mt-19">
-  <div className="bg-white shadow-lg overflow-hidden flex flex-col items-center justify-center min-h-[60vh] text-center px-6">
-    <h3 className="text-3xl md:text-4xl font-bold  mb-10 text-red-500">
-      Who We Are?
-    </h3>
-    <p className="text-lg md:text-xl font-medium text-gray-600 max-w-3xl">
-      LifeLink is a digital platform dedicated to connecting blood and organ
-      donors, hospitals, and patients in need. Our mission is simple – to
-      ensure that no life is lost due to the unavailability of blood or organs.
-    </p>
+      <section className="max-w-8xl mx-auto p-6 pt-5">
+        <div className="bg-gradient-to-r from-red-400 via-red-300 to-red-400 shadow-lg overflow-hidden flex flex-col items-center justify-center min-h-[60vh] text-center px-3">
+          <h3 className="text-3xl md:text-4xl font-bold  mb-10 text-red-500">
+            Who We Are?
+          </h3>
+          <p className="text-lg md:text-xl font-medium text-white max-w-3xl">
+            LifeLink is a digital platform dedicated to connecting blood and organ
+            donors, hospitals, and patients in need. Our mission is simple – to
+            ensure that no life is lost due to the unavailability of blood or organs.
+          </p>
+        </div>
+      </section>
+
+      {/* //second container */}
+      <section className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Left Side - Text */}
+      <div>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+        <p className="text-lg text-gray-600 mb-6">
+          LifeLink was founded with a simple yet powerful vision: to create a world where
+          no one dies waiting for blood or organ donations. We leverage cutting-edge technology
+          to connect donors with recipients instantly, ensuring that help arrives when it's needed most.
+        </p>
+        <p className="text-lg text-gray-600 mb-8">
+          Every day, thousands of people need blood transfusions and organ transplants.
+          Our platform eliminates barriers, reduces wait times, and saves lives by building
+          the largest network of verified donors and healthcare providers.
+        </p>
+        <div className="grid grid-cols-2 gap-6">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-red-600 mb-2">50K+</div>
+            <div className="text-gray-600">Active Donors</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-red-600 mb-2">25K+</div>
+            <div className="text-gray-600">Lives Saved</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Side - Image */}
+      <div className="relative">
+        <img
+          src="https://www.toomed.com/blog/wp-content/uploads/2017/11/stethoscope-1-original.jpg"
+          alt="Healthcare Mission"
+          className="rounded-lg shadow-xl"
+        />
+      </div>
+    </div>
   </div>
 </section>
-
-
-
 
 
 
