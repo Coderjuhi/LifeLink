@@ -46,18 +46,19 @@ const About = () => {
 
   return (
     <>
-      <section className="max-w-8xl mx-auto p-6 pt-5">
-        <div className="bg-gradient-to-r from-red-400 via-red-300 to-red-400 shadow-lg overflow-hidden flex flex-col items-center justify-center min-h-[60vh] text-center px-3">
-          <h3 className="text-3xl md:text-4xl font-bold  mb-10 text-red-500">
-            Who We Are?
-          </h3>
-          <p className="text-lg md:text-xl font-medium text-white max-w-3xl">
-            LifeLink is a digital platform dedicated to connecting blood and organ
-            donors, hospitals, and patients in need. Our mission is simple – to
-            ensure that no life is lost due to the unavailability of blood or organs.
-          </p>
-        </div>
-      </section>
+      <section className="max-w-7xl mx-auto p-6 pt-5">
+  <div className="bg-gradient-to-r from-red-400 via-red-300 to-red-400 shadow-lg overflow-hidden flex flex-col items-center justify-center min-h-[40vh] text-center px-4 py-10 rounded-xl">
+    <h3 className="text-2xl md:text-3xl font-bold mb-6 text-red-500 ">
+      Who We Are?
+    </h3>
+    <p className="text-base md:text-lg font-medium text-white max-w-2xl">
+      LifeLink is a digital platform dedicated to connecting blood and organ
+      donors, hospitals, and patients in need. Our mission is simple – to
+      ensure that no life is lost due to the unavailability of blood or organs.
+    </p>
+  </div>
+</section>
+
 
       {/* //second container */}
       <section className="py-16 bg-white">
