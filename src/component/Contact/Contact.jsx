@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heart, Mail, MapPin, Phone, Award, Shield } from 'lucide-react';
+import { Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
 
 function Contact() {
   return (
@@ -19,71 +19,74 @@ function Contact() {
       </section>
       {/* //second  */}
       <section className="py-12 bg-white">
-  <div className="max-w-7xl mx-auto px-6 lg:px-8">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start shadow-lg rounded-xl p-8">
-      
-      {/* Left Side - Contact Info */}
-      <div className="space-y-4">
-        <p className="flex items-center gap-3 text-gray-700">
-          <MapPin className="text-red-600 text-xl" />
-          <span><strong>Address:</strong> LifeLink HQ, New Delhi, India</span>
-        </p>
-        <p className="flex items-center gap-3 text-gray-700">
-          <Phone className="text-red-600 text-xl" />
-          <span><strong>Phone:</strong> +91 98765 4988</span>
-        </p>
-        <p className="flex items-center gap-3 text-gray-700">
-          <Mail className="text-red-600 text-xl" />
-          <span><strong>Email:</strong> support@lifelink.org</span>
-        </p>
-        <p className="mt-4 text-gray-600">
-          💬 Fill out the form, and our team will get back to you within{" "}
-          <span className="font-semibold">24 hours</span>.
-        </p>
-      </div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start shadow-lg rounded-xl p-8">
 
-      {/* Right Side - Contact Form */}
-      <div>
-        <form className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-300"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-300"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-            <textarea
-              rows="4"
-              placeholder="Your Message"
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-300"
-              required
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-3 rounded-lg shadow-md transition"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
+            {/* Left Side - Contact Info */}
+            <div className="space-y-4">
+              <p className="flex items-center gap-3 text-gray-700">
+                <MapPin className="text-red-600 text-xl" />
+                <span><strong>Address:</strong> LifeLink HQ, New Delhi, India</span>
+              </p>
+              <p className="flex items-center gap-3 text-gray-700">
+                <Phone className="text-red-600 text-xl" />
+                <span><strong>Phone:</strong> +91 98765 4988</span>
+              </p>
+              <p className="flex items-center gap-3 text-gray-700">
+                <Mail className="text-red-600 text-xl" />
+                <span><strong>Email:</strong> support@lifelink.org</span>
+              </p>
+              <p className="mt-4 text-gray-600 flex items-center justify-center lg:justify-start gap-2">
+                <MessageCircle className="text-red-600" size={18} aria-hidden="true" />
+                <span>
+                  Fill out the form, and our team will get back to you within{' '}
+                  <span className="font-semibold">24 hours</span>.
+                </span>
+              </p>
+            </div>
 
-    </div>
-  </div>
-</section>
+            {/* Right Side - Contact Form */}
+            <div>
+              <form className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-300"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-300"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                  <textarea
+                    rows="4"
+                    placeholder="Your Message"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-300"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-3 rounded-lg shadow-md transition"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
 
     </>
